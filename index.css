@@ -1,13 +1,15 @@
+
 body {
   margin: 0;
-  font-family: monospace;
+  font-family: 'Arial', sans-serif; /* Change to a more modern font */
+  background-color: #f9f9f9; /* Light background for better contrast */
 }
 
 #toy-header {
   display: flex;
   justify-content: center;
-  background: #515DA2;
-  opacity: .8;
+  background: #515DA2; /* Header background color */
+  opacity: 0.9;
   height: 7rem;
   padding: 1rem;
 }
@@ -17,83 +19,100 @@ body {
   width: auto;
 }
 
-#toy-collection {
-  margin: 2rem;
-}
-
-.card {
-  text-align: center;
-  border: grey solid 1px;
-  padding: 1rem;
-  width: 15rem;
-  height: 25rem;
-  display: inline-grid;
-  margin: 1rem 2rem;
-  box-shadow: 3px 4px #e04b52
-}
-
-.toy-avatar {
-  justify-self: center;
-  height: 12rem;
-  width: auto;
-}
-
-button {
-  position: relative;
-  background-color: #e04b52;
-  border: none;
-  border-radius: 5px;
-  height: 3rem;
-  width: max-content;
-  color: whitesmoke;
-  font-size: 18px;
-  justify-self: center;
-}
-
-button:hover {
-  background-color: whitesmoke;
-  border: #e04b52 solid 1px;
-  color: #e04b52;
-}
-
 .container {
-  padding: 1rem;
-  width: stretch;
-  height: auto;
-  display: none;
-  background: #515DA2;
-  opacity: .8;
+  display: none; /* Initially hidden */
+  background: #ffffff; /* White background for the form */
+  opacity: 0.95; /* Slightly transparent */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  padding: 2rem; /* Padding around the form */
+  width: 80%; /* Width of the container */
+  max-width: 600px; /* Maximum width for large screens */
+  margin: 20px auto; /* Center the container */
 }
 
 .add-toy-form {
-  width: 80%
+  display: flex;
+  flex-direction: column; /* Arrange inputs vertically */
+  gap: 10px; /* Space between inputs */
+}
+
+.input-text {
+  border: 1px solid #ccc; /* Light grey border */
+  border-radius: 5px; /* Rounded corners */
+  height: 2rem; /* Height of input fields */
+  font-size: 16px; /* Font size for inputs */
+  padding: 5px; /* Padding inside inputs */
 }
 
 .submit {
-  position: relative;
-  background-color: #e04b52;
+  background-color: #e04b52; /* Button color */
   border-radius: 5px;
-  height: 2rem;
-  width: max-content;
-  color: whitesmoke;
-  font-size: 18px;
-  justify-self: center;
-  font-family: monospace;
-  margin: 3px;
+  height: 2.5rem; /* Height of the button */
+  color: whitesmoke; /* Button text color */
+  font-size: 18px; /* Button text size */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
 .submit:hover {
-  background-color: whitesmoke;
-  border: #e04b52 solid 1px;
-  color: #e04b52;
+  background-color: whitesmoke; /* Change background on hover */
+  color: #e04b52; /* Change text color on hover */
+}
+
+#toy-collection {
+  display: grid; /* Use grid layout for toy cards */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns */
+  gap: 25px; /* Space between cards */
+  width: 90%; /* Width of the collection */
+  margin: 40px auto; /* Center the collection */
+}
+
+.toy-card {
+  background-color: #f0f0f0; /* Light background for cards */
+  padding: 20px; /* Padding inside cards */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow for cards */
+  text-align: center; /* Center align text */
+  transition: transform 0.2s; /* Smooth hover effect */
+  border-left: #e04b52;
+}
+
+.toy-card:hover {
+  transform: scale(1.05); /* Slightly enlarge card on hover */
+}
+
+.toy-card img {
+  width: 100%; /* Full width images */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Rounded corners for images */
+}
+
+.like-btn {
+  background-color:palevioletred; /* Green background for like button */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  color: white; /* White text color */
+  padding: 10px 15px; /* Padding around button */
+  font-size: 16px; /* Font size for button */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.like-btn:hover {
+  background-color: plum; /* Darker green on hover */
+}
+#new-toy-btn{
+  background-color:palevioletred; /* Green background for like button */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  color: white; /* White text color */
+  padding: 10px 15px; /* Padding around button */
+  font-size: 16px; /* Font size for button */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
 
-.input-text {
-  border-radius: 5px;
-  height: 2rem;
-  width: 60%;
-  font-size: 18px;
-  font-family: monospace;
-  margin: 3px;
-}
+
+
